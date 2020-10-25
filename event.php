@@ -2,14 +2,15 @@
 include 'core/init.php';
 $id = $_GET['event_id'];
 
-
 	session_start();
 	$s_id = $_SESSION['id'];
 										
 											
 		$insert4 = $db->query("INSERT INTO `event_register_one` (`event_id`, `user_id`) VALUES ('$id', '$s_id')");
 		
-					
+			if(isset($_POST['go_back'])){
+				echo "<script>window.open('guest.php', '_self')</script>";
+			}		
 
 
 		?>
@@ -32,7 +33,7 @@ $id = $_GET['event_id'];
 							<div class="navbar-nav ">
 								
 							 <form class="form-inline" method="post">
-	   							 
+	   							  <button class="btn btn-outline-success my-2 my-sm-0 mr-sm-2" type="submit" name="go_back">Go Back</button>
 	  						</form>
 	   					</div>
 						</div>

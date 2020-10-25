@@ -59,7 +59,7 @@
 									<td><?php echo $event_name1;?></td>
 									<td><?php echo $event_date1;?></td>
 									<td><?php echo $event_creator_name1. " ".$event_creator_name2;?></td>
-									<td><button type="submit" class="btn btn-success" name="attend"><a href="event.php?even_id=<?= $event_id1 ;?>" style="color: #fff;">Attend</a></button></td>
+									<td><button type="submit" class="btn btn-success" name="attend"><a href="event.php?event_id=<?= $event_id1 ;?>" style="color: #fff;">Attend</a></button></td>
 								</tbody>
 							<?php endwhile?>
 						</table>
